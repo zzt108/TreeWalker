@@ -4,11 +4,12 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace TreeWalkerTest
 {
     [TestClass]
-    public class UnitTest1
+    public class UnitTestMain
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestMain()
         {
+            TreeWalker.Program.Main(null);
         }
     }
 }

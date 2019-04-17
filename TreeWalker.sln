@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeWalkerTest", "TreeWalkerTest\TreeWalkerTest.csproj", "{0AA1D416-E0ED-4F64-8B6B-FCF4790CA3CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeWalker", "TreeWalker\TreeWalker.csproj", "{90E1DAFE-678E-4F39-8C37-591EB735686D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0AA1D416-E0ED-4F64-8B6B-FCF4790CA3CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0AA1D416-E0ED-4F64-8B6B-FCF4790CA3CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0AA1D416-E0ED-4F64-8B6B-FCF4790CA3CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90E1DAFE-678E-4F39-8C37-591EB735686D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90E1DAFE-678E-4F39-8C37-591EB735686D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90E1DAFE-678E-4F39-8C37-591EB735686D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90E1DAFE-678E-4F39-8C37-591EB735686D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
