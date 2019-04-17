@@ -17,7 +17,11 @@ namespace TreeWalker
         public Node[] Children { get; }
         public override string ToString()
         {
-            return Data.ToString();
+            if (Children[0] == null)
+            {
+                return Data.ToString();
+            }
+            return $"{Data}[{Children[0]}:{Children[1]}]";
         }
     }
 
@@ -45,22 +49,43 @@ namespace TreeWalker
     {
         public NodeTriangle(List<NodeLevel> levels)
         {
-            Console.WriteLine($"ctor - lines {this.Count}");
             if (levels != null)
             {
                 AddRange(levels);
+                HookUpData();
+            }
+        }
+
+        private void HookUpData()
+        {
+            Node[] prevLevel = null;
+            foreach (var level in this)
+            {
+
+                if (prevLevel != null)
+                {
+                    var thisLevel = level.ToArray();
+                    for (var i = 0; i < prevLevel.Length; i++)
+                    {
+                        prevLevel[i].Children[0] = thisLevel[i];
+                        prevLevel[i].Children[1] = thisLevel[i+1];
+                    }
+                }
+
+                prevLevel = level.ToArray();
             }
         }
     }
 
     public class Program
     {
-        //public static Node Root = new Node(215);
-        public static NodeTriangle Triangle = new NodeTriangle(null)
+        public static NodeTriangle Triangle = new NodeTriangle(
+            new List<NodeLevel>
         {
             new NodeLevel(new []{215})  ,
-            new NodeLevel(new []{192, 124})
-        };
+            new NodeLevel(new []{192, 124})  ,
+            new NodeLevel(new []{117, 269, 442})
+        });
 
         public static void Main(string[] args)
         {
