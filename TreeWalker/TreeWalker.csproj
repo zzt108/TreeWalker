@@ -48,6 +48,8 @@
     <Compile Include="NodeTriangle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Route.cs" />
+    <Compile Include="RouteList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

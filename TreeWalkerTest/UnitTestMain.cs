@@ -8,7 +8,7 @@ namespace TreeWalkerTest
     [TestClass]
     public class UnitTestMain
     {
-        public static NodeTriangle TesTriangle = new NodeTriangle(
+        public static NodeTriangle TestTriangle = new NodeTriangle(
             new List<NodeLevel>
             {
                 new NodeLevel(new []{1})  ,
@@ -22,12 +22,24 @@ namespace TreeWalkerTest
         {
             TreeWalker.Program.Main(null);
         }
+
         [TestMethod]
         public void WriteTestData()
         {
-            foreach (var level in TesTriangle)
+            foreach (var level in TestTriangle)
             {
                 Console.WriteLine(level);
+            }
+        }
+
+        [TestMethod]
+        public void GetRoutes()
+        {
+            var routes = new RouteList(TestTriangle[0][0]);
+            routes.Grow();
+            foreach (var route in routes)
+            {
+                Console.WriteLine(route);
             }
         }
     }

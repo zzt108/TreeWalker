@@ -26,8 +26,6 @@ namespace TreeWalker
                     {
                         prevLevel[i].Children[0] = thisLevel[i];
                         prevLevel[i].Children[1] = thisLevel[i+1];
-                        thisLevel[i].Parents.Add(prevLevel[i]);
-                        thisLevel[i+1].Parents.Add(prevLevel[i]);
                     }
                 }
 
@@ -35,10 +33,5 @@ namespace TreeWalker
             }
         }
 
-        private List<Node> GetValidRoute()
-        {
-            var route = new List<Node>();
-
-        }
     }
 }
