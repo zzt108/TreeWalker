@@ -2,12 +2,11 @@
 
 namespace TreeWalker
 {
+    /// <summary>
+    /// A row in the triangle data
+    /// </summary>
     public class NodeLevel : List<Node>
     {
-        public NodeLevel(List<Node> nodes)
-        {
-            AddRange(nodes);
-        }
         public NodeLevel(int[] data)
         {
             foreach (var i in data)

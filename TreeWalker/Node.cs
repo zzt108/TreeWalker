@@ -4,6 +4,9 @@ using System.Linq;
 
 namespace TreeWalker
 {
+    /// <summary>
+    /// A node in the triangle data (input provided to the app)
+    /// </summary>
     public class Node
     {
         private const int ChildCount = 2;
@@ -15,7 +18,11 @@ namespace TreeWalker
         {
             return (number % 2) == 0;
         }
-
+       /// <summary>
+       /// Shows if a child node is valid, according to the acceptance criteria. Currently a child is valid if its oddness is opposite to its parent's oddness.
+       /// </summary>
+       /// <param name="relative"></param>
+       /// <returns></returns>
         private bool ValidRelative(Node relative)
         {
             return (Odd(Data) != Odd(relative.Data));

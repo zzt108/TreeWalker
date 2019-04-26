@@ -2,6 +2,9 @@
 
 namespace TreeWalker
 {
+    /// <summary>
+    /// A representation of the input data for the app
+    /// </summary>
     public class NodeTriangle : List<NodeLevel>
     {
         public NodeTriangle(List<NodeLevel> levels)
@@ -13,6 +16,9 @@ namespace TreeWalker
             }
         }
 
+        /// <summary>
+        /// Links child nodes to their parent nodes
+        /// </summary>
         private void HookUpData()
         {
             Node[] prevLevel = null;
