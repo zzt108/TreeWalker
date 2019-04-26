@@ -30,9 +30,16 @@ namespace TreeWalker
 
         public static void Main(string[] args)
         {
-            foreach (var level in Triangle)
+            var routes = new RouteList(Triangle[0][0]);
+            routes.Grow();
+            var highestSumRoute = routes.OrderBy(route => route.RouteSum).LastOrDefault(route => route.IsValid);
+            if (highestSumRoute == null)
             {
-                Console.WriteLine(level);
+                Console.WriteLine($"There is no valid route in the triangle");
+            }
+            else
+            {
+                Console.WriteLine($"Route with highest sum is {highestSumRoute}");
             }
         }
     }
