@@ -43,16 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Node.cs" />
-    <Compile Include="NodeLevel.cs" />
-    <Compile Include="NodeTriangle.cs" />
+    <Compile Include="Node\Node.cs" />
+    <Compile Include="Node\NodeLevel.cs" />
+    <Compile Include="Node\NodeTriangle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Route.cs" />
-    <Compile Include="RouteList.cs" />
+    <Compile Include="Route\Route.cs" />
+    <Compile Include="Route\RouteList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

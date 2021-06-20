@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using TreeWalker.Node;
+using TreeWalker.Route;
 
 namespace TreeWalker
 {
     public class Program
     {
-        public static NodeTriangle Triangle = new NodeTriangle(
+        private static readonly NodeTriangle Triangle = new NodeTriangle(
             new List<NodeLevel>
         {
             new NodeLevel(new []{215})  ,
@@ -33,14 +33,9 @@ namespace TreeWalker
             var routes = new RouteList(Triangle[0][0]);
             routes.Grow();
             var highestSumRoute = routes.OrderBy(route => route.RouteSum).LastOrDefault(route => route.IsValid);
-            if (highestSumRoute == null)
-            {
-                Console.WriteLine($"There is no valid route in the triangle");
-            }
-            else
-            {
-                Console.WriteLine($"Route with highest sum is {highestSumRoute}");
-            }
+            Console.WriteLine(highestSumRoute == null
+                ? $"There is no valid route in the triangle"
+                : $"Route with highest sum is {highestSumRoute}");
         }
     }
 }

@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace TreeWalker
+namespace TreeWalker.Route
 {
     /// <summary>
     /// A sequence of nodes, making a route
     /// </summary>
-    public class Route : List<Node>
+    public class Route : List<Node.Node>
     {
-        public Route(Node start)
+        public Route(Node.Node start)
         {
             Add(start);
         }

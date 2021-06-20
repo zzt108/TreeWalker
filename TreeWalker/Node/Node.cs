@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace TreeWalker
+namespace TreeWalker.Node
 {
     /// <summary>
     /// A node in the triangle data (input provided to the app)
@@ -12,6 +11,7 @@ namespace TreeWalker
         private const int ChildCount = 2;
         internal Node[] Children { get; }
 
+        // Number contained in the node
         public int Data { get; }
 
         private static bool Odd(int number)
@@ -47,10 +47,9 @@ namespace TreeWalker
         public override string ToString()
         {
             if (HasNoChildren)
-            {
                 return Data.ToString();
-            }
-            return $"{Data}[{Children[0]}:{Children[1]}]";
+            else
+                return $"{Data}[{Children[0]}:{Children[1]}]";
         }
 
     }

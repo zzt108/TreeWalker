@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
 
-namespace TreeWalker
+namespace TreeWalker.Node
 {
     /// <summary>
     /// A representation of the input data for the app
     /// </summary>
     public class NodeTriangle : List<NodeLevel>
     {
-        public NodeTriangle(List<NodeLevel> levels)
+        public NodeTriangle(IReadOnlyCollection<NodeLevel> levels)
         {
             if (levels != null)
             {

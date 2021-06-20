@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TreeWalker;
+using TreeWalker.Node;
+using TreeWalker.Route;
 
 namespace TreeWalkerTest
 {

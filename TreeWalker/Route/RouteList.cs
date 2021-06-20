@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
 
-namespace TreeWalker
+namespace TreeWalker.Route
 {
     /// <summary>
     /// A list of routes
     /// </summary>
     public class RouteList : List<Route>
     {
-        public RouteList(Node start)
+        public RouteList(Node.Node start)
         {
             Add(new Route(start));
         }
