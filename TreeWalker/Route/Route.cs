@@ -37,7 +37,8 @@ namespace TreeWalker.Route
         public bool IsValid => this.Last().HasNoChildren;
 
         /// <summary>
-        ///  Add valid child node to the route. If there is more than one valid child then a cloned route vith the other child is also added to the routeList
+        ///  Add valid child node to the route. If there is more than one valid child
+        /// then a cloned route with the other child is also added to the routeList
         /// </summary>
         /// <param name="routeList">Route list containing all possible routes. May get new routes added in this method</param>
         public void Grow(RouteList routeList)

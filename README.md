@@ -2,7 +2,7 @@
 
 Please write a maintainable solution for the question on page 2, using the rules given below:
 The solution must be written in C#.
-You will be given a triangle input (which is a directed graph) and you need to find the path that
+You will be given a triangle input (which is a **directed graph**) and you need to **find the path** that
 provides the maximum possible sum of the numbers per the given rules below:
 1. You will start from the top and move downwards to the last possible node.
 2.  You must proceed by changing between even and odd numbers subsequently. Suppose that
